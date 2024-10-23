@@ -3,6 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mɾ_̆̈Ọυαȥι</title>
+	<meta property="og:title" content=Mɾ_̆̈Ọυαȥι>
+<meta property="og:site_name" content=qu4z1.xyz >
+<meta property="og:url" content=qu4z1.xyz >
+<meta property="og:description" content=Mɾ_̆̈Ọυαȥι's home page>
+<meta property="og:type" content=website>
+<meta property="og:image" content=https://github.com/quazi00/quazi00.github.io/blob/main/resoreces/VRChat_2024-04-04_05-28-32.526_1080x1920__2_-removebg-preview__2_-removebg-preview-removebg-preview.png?raw=true>
     <style>
         body {
             margin: 0;
