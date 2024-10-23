@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
-            background: url('http://qu4z1.xyz/resoreces/VRChat_2024-04-04_05-28-32.526_1080x1920__2_-removebg-preview__2_-removebg-preview-removebg-preview.png') no-repeat center center fixed;
+            background: url('https://qu4z1.xyz/resoreces/TheSacredHeartofQuazi.png') no-repeat center center fixed;
             background-size: cover;
             color: #008b8b; /* Dark cyan/teal */
             display: flex;
