@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mɾ_̆̈Ọυαȥι</title>
+	<meta content="http://qu4z1.xyz/resoreces/VRChat_2024-04-04_05-28-32.526_1080x1920__2_-removebg-preview__2_-removebg-preview-removebg-preview.png" property="og:image">
     <style>
         body {
             margin: 0;
