@@ -7,7 +7,7 @@
         body {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
-            background: url('https://cdn.discordapp.com/attachments/944127488974536704/1272802519969435669/wallpaper.gif?ex=66bc4d38&is=66bafbb8&hm=0d8e7088f0cf3856aa9d467c7c09d6dd23103598074b101b13411fe14f12648c&') no-repeat center center fixed;
+            background: url('http://qu4z1.xyz/resoreces/VRChat_2024-04-04_05-28-32.526_1080x1920__2_-removebg-preview__2_-removebg-preview-removebg-preview.png') no-repeat center center fixed;
             background-size: cover;
             color: #008b8b; /* Dark cyan/teal */
             display: flex;
@@ -82,10 +82,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://cdn.discordapp.com/avatars/261935450481098753/c38478d63491e728054f76a394262319.webp?size=1024&format=webp&width=0&height=256" alt="Profile Picture" class="profile-pic">
-        <!-- Replace the src with your GIF URL -->
-        <img src="image_2024-08-13_013935053.png" alt="Name GIF" class="name-gif">
-        <p class="bio">Cyberpunk enthusiast, tech aficionado, and digital nomad. Exploring the intersection of technology and humanity.</p>
+        <img src="http://qu4z1.xyz/resoreces/VRChat_2024-04-04_05-28-32.526_1080x1920__2_-removebg-preview__2_-removebg-preview-removebg-preview.png" alt="Profile Picture" class="profile-pic">
+        <p> EX Client Monkey | Plugin Enthusiast <p/>
+<p class="bio">If you have any kind of software for VRChat that I haven't heard of, I will be impressed.
+This is my second account, and no, I'm not a well known monkey that's cringe. Sometimes, I make wallpapers because I'm bored.</p>
         <div class="social-links">
             <a href="#" target="_blank"><i class="fab fa-steam"></i></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
