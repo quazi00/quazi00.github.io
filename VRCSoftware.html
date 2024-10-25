@@ -104,7 +104,7 @@
     </thead>
     <tbody>
       <tr>
-            <td><a class="no-style" onclick="copyText('https://avtr.just-h.party/vrcx ,_https://avtr.nekosunevr.co.uk/vrcx_search.php https://vrcx.vrcdb.com/avatars/Avatar/VRCX https://api.avtrdb.com/v1/avatar/search/vrcx')">VRCX</a></td>
+            <td><a class="no-style" onclick="addNextAvatarDB()" >VRCX</a></td>
             <td>Software</td>
             <td>API GUI client (a.k.a. a better version of the website).</td>
             <td>pypy-vrc & natsumida</td>
@@ -320,23 +320,37 @@
 
 </table>
 <div class="feedback" id="feedback">VRCX Avatar DataBaces copied to clipboard!</div>
+<!-- vrcx redirect taken from zuxi.dev thanks man this is so fucking cool :P-->
+<script> 
+    let currentIndex = 0; // Initialize the index to keep track of which link to open
 
-<script>
-	function copyText(text) {
-    const textArea = document.createElement("textarea");
-    textArea.value = text; // Set the text to copy
-    document.body.appendChild(textArea); // Append to body
-    textArea.select(); // Select the text
-    document.execCommand("copy"); // Copy to clipboard
-    document.body.removeChild(textArea); // Remove the textarea
+    function addNextAvatarDB() {
+        const baseURL = "vrcx://addavatardb/";
+        const links = [
+            "https://api.avtrdb.com/v1/avatar/search/vrcx",
+            "https://vrcx.vrcdb.com/avatars/Avatar/VRCX",
+            "https://avtr.nekosunevr.co.uk/vrcx_search.php",
+            "https://avtr.just-h.party/vrcx_search.php",
+            "https://api.zuxi.dev/api/v6/vrcx/search"
+        ];
 
-    // Show feedback message
-    const feedback = document.getElementById("feedback");
-    feedback.style.display = "block"; // Show feedback
-    setTimeout(() => {
-        feedback.style.display = "none"; // Hide after 2 seconds
-    }, 2000);
-}
+        if (currentIndex < links.length) {
+            const fullURL = baseURL + links[currentIndex]; // Concatenate directly
+            window.open(fullURL); // Open the current link
+            currentIndex++; // Move to the next link
+        } else {
+            alert("All avatar databases have been added!"); // Alert when all links are used
+        }
+    }
+
+    function openVRCX() {
+        // Optional: Show feedback message
+        const feedback = document.getElementById("feedback");
+        feedback.style.display = "block"; // Show feedback
+        setTimeout(() => {
+            feedback.style.display = "none"; // Hide after 2 seconds
+        }, 2000);
+    }
 </script>
 <footer style="text-align: center; margin-top: 20px; color: #fff;">
         Made and upkeeped by <a href="https://discord.com/users/261935450481098753" style="color: #008b8b; text-decoration: none;">Mɾ_̆̈Ọυαȥι</a> 
