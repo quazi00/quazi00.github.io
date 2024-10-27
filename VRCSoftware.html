@@ -11,7 +11,7 @@
 	<meta property="og:description" content="A list of ToS compliant Software and plugins for VRChat players" />
 	<meta name="theme-color" content="#	#0F9D58"/>
 	<link rel="icon" href="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" type="image/png">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,21 +21,33 @@
 			cursor: url('https://qu4z1.xyz/resources/cursor/point32.png'), auto;
         }
 		
-        h2 {
-            text-align: center;
-            color: #e0e0e0; /* Light text color */
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Center the header content */
-            margin-bottom: 20px; /* Space between header and table */
-        }
-        .header img {
-            width: 32px; /* Adjust the size as needed */
-            height: 32px; /* Adjust the size as needed */
-            margin-left: 10px; /* Space between the image and text */
-        }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: auto; /* Centers the h2 and image */
+}
+
+.title h2 {
+    text-align: center;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+
+.title img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.header h3 {
+    color: #e0e0e0;
+}
         .software-table {
             width: 100%;
             border-collapse: collapse;
@@ -82,13 +94,40 @@
     text-decoration: none; /* Remove underline */
     cursor: url('https://qu4z1.xyz/resources/cursor/hand32.png'), auto; /* Set custom cursor */
 		}
+		.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+	.tooltip .tooltip-content {
+		visibility: hidden;
+		width: 180px; /* Adjust as needed */
+		background-color: #333;
+		padding: 8px;
+		border-radius: 4px;
+		position: absolute;
+		bottom: 0%; /* Position above the icon */
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		text-align: center;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+	.tooltip:hover .tooltip-content {
+		visibility: visible;
+}
+
     </style>
 </head>
 <body>
 
 <div class="header">
-	<img src="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" alt="VRC Software Icon">
-    <h2>Useful VRChat Software</h2>
+    <div class="title">
+		<img src="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" alt="VRC Software Icon">
+			<h2>Useful VRChat Software</h2>
+    </div>
+    <h3><a href="https://qu4z1.xyz/VRCSoftware/Linux" >Use Linux?</a></h3>
 </div>
 <table class="software-table">
     <head>
@@ -123,6 +162,21 @@
             <td><a href="https://github.com/vrcx-team/VRCX">github</a></td>
             <td>Free</td>
         </tr>
+	        <tr>
+   <!--    	<td>VRCSnax</td>
+        <td>Software</td>
+       	<td>
+				<span class="tooltip">vanity tags for vrcx ℹ<i class="fa-solid fa-sparkles"></i>
+					<span class="tooltip-content">
+						<img src="https://invalid.one/uploads/ifs8hMFT37.png" alt="VRCSnax Showcase" width="800" height="220">
+		</span>
+		</span>
+		</td>
+        <td>officiallynull</td>
+       	<td><a href="INVITE LINK">Discord</a></td>
+        <td><a href="https://invalid.one/public/VRCSnaxLoader.exe">Direct Download</a></td>
+        <td>Free</td>
+    </tr> -->
         <tr>
             <td>VRCX Metadata</td>
             <td>Software</td>
@@ -162,8 +216,8 @@
         <td>Free</td>
     </tr>
     <tr>
-        <td>magichat box
-		<span style="cursor: help;" title=" how to get egg mode: go to status and add boihanny and sr4 series. popup will show. go to options it will show egg mode option now :) have fun">ℹ</span>
+        <td>
+		<span style="cursor: help;" title=" how to get egg mode: go to status and add boihanny and sr4 series. popup will show. go to options it will show egg mode option now :) have fun">magichat box ℹ</span>
 		</td>
         <td>Software</td>
         <td>Displays different things in your chatbox, like PC specs and music.</td>
@@ -185,7 +239,7 @@
         <td>iListen</td>
         <td>Software</td>
         <td>Controls a partner's toggles on their model from your PC.</td>
-        <td>NULL</td>
+        <td>officiallynull</td>
         <td>N/A</td>
         <td><a href="https://invalid.one/public/iListen.exe">DirectDownload</a></td>
         <td>Free</td>
@@ -233,7 +287,7 @@
         <td>feilen</td>
         <td><a href="https://discord.com/invite/vgvSkSk">Discord</a></td>
         <td><a href="https://store.steampowered.com/app/1009850/OVR_Advanced_Settings/">Steam</a></td>
-        <td>$7.99</td>
+        <td id="price-1009850">????</td>
     </tr>
     <tr>
         <td>OVR tool kit</td>
@@ -242,16 +296,7 @@
         <td>curtisvl</td>
         <td><a href="https://discord.gg/rGWjyCz">Discord</a></td>
         <td><a href="https://store.steampowered.com/app/1068820/OVR_Toolkit/">Steam</a></td>
-        <td>$11.99</td>
-    </tr>
-    <tr>
-        <td>xsoverlay</td>
-        <td>Steam VR Plugin</td>
-        <td>Better OVR Toolkit.</td>
-        <td>xiexe</td>
-        <td><a href="https://discord.gg/bCUHVeX7BR">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1173510/XSOverlay/">Steam</a></td>
-        <td>$9.99</td>
+        <td id="price-1068820"> ???? </td>
     </tr>
     <tr>
         <td>fps vr</td>
@@ -260,7 +305,7 @@
         <td>Sergio</td>
         <td>N/A</td>
         <td><a href="https://store.steampowered.com/app/908520/fpsVR/">Steam</a></td>
-        <td>$3.99</td>
+        <td id="price-908520">????</td>
     </tr>
     <tr>
         <td>YUR</td>
@@ -268,7 +313,7 @@
         <td>Calorie counter for VR.</td>
         <td>tickyotacky</td>
         <td><a href="https://discord.gg/yur">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1188920/YUR/">Steam</a></td>
+        <td><a href="https://store.steampowered.com/app/1173510/YUR/">Steam</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -287,7 +332,7 @@
         <td>I3Llamas</td>
         <td><a href="https://discord.gg/Z6NnSqNYr6">Discord</a></td>
         <td><a href="https://store.steampowered.com/app/2370570/Standable_Full_Body_Estimation/">Steam</a></td>
-        <td>$19.99</td>
+        <td id="price-2370570">????</td>
     </tr>
     <tr>
         <td>oyasumiVR</td>
@@ -298,6 +343,24 @@
         <td><a href="https://store.steampowered.com/app/2538150/OyasumiVR__VR_Sleeping_Utilities/">Steam</a></td>
         <td>Free</td>
     </tr>
+	<tr>
+        <td>xsoverlay</td>
+        <td>Steam VR Plugin</td>
+        <td>Better OVR Toolkit.</td>
+        <td>xiexe</td>
+        <td><a href="https://discord.gg/bCUHVeX7BR">Discord</a></td>
+        <td><a href="https://store.steampowered.com/app/1173510/XSOverlay/">Steam</a></td>
+        <td id="price-1173510" >????</td>
+    </tr>
+	   <!--needs to be valadaited <tr>
+       	<td>XSOverlay Keyboard OSC</td>
+        <td>Steam VR Plugin+</td>
+       	<td>Make XSOverlay a usable chatbox input for VRChat</td>
+        <td>nyakoo</td>
+       	<td><a href="https://discord.gg/BrUacrw4cy">Discord</a></td>
+        <td><a href="https://github.com/nyakowint/xsoverlay-keyboard-osc">Github</a></td>
+        <td>Free</td>
+    </tr> -->
     <tr>
         <td>vrhand frame</td>
         <td>Steam VR Plugin</td>
@@ -382,6 +445,40 @@
         }, 2000);
     }
 </script>
+<script>
+async function updatePrices() {
+    const appIds = [1173510, 1009850, 2370570, 908520, 1068820]; // Replace with actual app IDs
+    const prices = await Promise.all(appIds.map(appId => 
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/appdetails?appids=${appId}`)}`)
+            .then(response => response.json())
+            .then(data => JSON.parse(data.contents))
+            .then(jsonData => {
+                if (jsonData[appId] && jsonData[appId].success) {
+                    return jsonData[appId].data.price_overview ? 
+                        `$${(jsonData[appId].data.price_overview.final / 100).toFixed(2)}` : 'Not available';
+                } else {
+                    console.error(`Failed to fetch price data for app ID: ${appId}`);
+                    return 'Error';
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                return 'Error';
+            })
+    ));
+
+    // Update HTML elements with prices
+    document.getElementById('price-1173510').innerText = prices[0]; // Original Game 1
+    document.getElementById('price-1009850').innerText = prices[1]; // Game 2
+    document.getElementById('price-2370570').innerText = prices[2]; // Game 3
+    document.getElementById('price-908520').innerText = prices[3]; // Game 4
+    document.getElementById('price-1068820').innerText = prices[4]; // Game 5
+}
+
+window.onload = updatePrices;
+
+</script>
+
 <footer style="text-align: center; margin-top: 20px; color: #fff;">
         Made and upkeeped by <a href="https://discord.com/users/261935450481098753" style="color: #008b8b; text-decoration: none;">Mɾ_̆̈Ọυαȥι</a> 
         for questions or suggestions DM me</a>
