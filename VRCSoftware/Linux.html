@@ -1,1 +1,250 @@
-WIP
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Software List</title>
+	<link rel="icon" href="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" type="image/x-icon">
+	<meta content="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" property="og:image">
+	<meta property="og:title" content="VRCSoftware" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://qu4z1.xyz/VRCSoftware" />
+	<meta property="og:description" content="A list of ToS compliant Software and plugins for VRChat players" />
+	<meta name="theme-color" content="#	#0F9D58"/>
+	<link rel="icon" href="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" type="image/png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            padding: 20px;
+			cursor: url('https://qu4z1.xyz/resources/cursor/point32.png'), auto;
+        }
+		
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: auto; /* Centers the h2 and image */
+}
+
+.title h2 {
+    text-align: center;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+
+.title img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.header h3 {
+    color: #e0e0e0;
+}
+        .software-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+        }
+        .software-table th, .software-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444; /* Dark border */
+        }
+        .software-table th {
+            background-color: #008b8b; /* Header background color */
+            color: #fff; /* Header text color */
+        }
+        .software-table tr:nth-child(even) {
+            background-color: #2a2a2a; /* Darker row for even rows */
+        }
+        .software-table tr:hover {
+            background-color: #333; /* Dark hover color */
+        }
+        a {
+            color: #00bcd4; /* Lighter link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+			cursor: url('https://qu4z1.xyz/resources/cursor/hand32.png'), auto; /* Set custom cursor */
+        }
+		 .feedback {
+             position: fixed; /* Position the feedback message fixed to the viewport */
+			top: 50%; /* Center vertically */
+			left: 50%; /* Center horizontally */
+			transform: translate(-50%, -50%); /* Offset by half its width and height to truly center it */
+			background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+			color: #ff0000; /* White text color */
+			padding: 10px 20px; /* Some padding for aesthetics */
+			border-radius: 5px; /* Slightly rounded corners */
+			display: none; /* Hide by default */
+			z-index: 1000; /* Ensure it appears above other elements */
+        }
+		.no-style {
+    color: inherit; /* Use the current color */
+    text-decoration: none; /* Remove underline */
+    cursor: url('https://qu4z1.xyz/resources/cursor/hand32.png'), auto; /* Set custom cursor */
+		}
+		.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+	.tooltip .tooltip-content {
+		visibility: hidden;
+		width: 180px; /* Adjust as needed */
+		background-color: #333;
+		padding: 8px;
+		border-radius: 4px;
+		position: absolute;
+		bottom: 0%; /* Position above the icon */
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		text-align: center;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+	.tooltip:hover .tooltip-content {
+		visibility: visible;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">
+		<img src="https://qu4z1.xyz/resources/favicons/VRCSoftwareicon.png" alt="VRC Software Icon">
+			<h2>Useful VRChat Software For Linux</h2>
+    </div>
+    <h3><a href="https://qu4z1.xyz/VRCSoftware" >Use Windows?</a></h3>
+</div>
+<table class="software-table">
+    <head>
+<!--  template:
+    <tr>
+       	<td>NAME</td>
+        <td>TYPE</td>
+       	<td>DESCRIPTION</td>
+        <td>CREATORS DISCORD NAME</td>
+       	<td><a href="INVITE LINK">Discord</a></td>
+        <td><a href="WEBSITE LINK">Github Website Direct Download...</a></td>
+        <td>PRICE</td>
+    </tr>
+-->
+	    <tr>
+            <th>Software Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Creator Discord/Name</th>
+            <th>Discord</th>
+            <th>Website</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+            <td><a class="no-style" onclick="addNextAvatarDB()" >VRCX</a></td>
+            <td>Software</td>
+            <td>API GUI client (a.k.a. a better version of the website).</td>
+            <td>pypy-vrc & natsumida</td>
+            <td><a href="https://vrcx.pypy.moe/discord">Discord</a></td>
+            <td><a href="https://github.com/vrcx-team/VRCX">github</a></td>
+            <td>Free</td>
+        </tr>
+	      <tr>
+           <td>MoonBeam</td>
+            <td>Software</td>
+             <td>Linux native alternative to VRCX </td>
+            <td>tonicmoon</td>
+             <td>N/A</td>
+            <td><a href="https://github.com/Taiko2k/Moonbeam">Github</a></td>
+        <td>Free</td>
+        </tr>
+    </tbody>
+
+</table>
+<div class="feedback" id="feedback">VRCX Avatar DataBaces copied to clipboard!</div>
+<!-- vrcx redirect taken from zuxi.dev thanks man this is so fucking cool :P-->
+<script> 
+    let currentIndex = 0; // Initialize the index to keep track of which link to open
+
+    function addNextAvatarDB() {
+        const baseURL = "vrcx://addavatardb/";
+        const links = [
+            "https://api.avtrdb.com/v1/avatar/search/vrcx",
+            "https://vrcx.vrcdb.com/avatars/Avatar/VRCX",
+            "https://avtr.nekosunevr.co.uk/vrcx_search.php",
+            "https://avtr.just-h.party/vrcx_search.php",
+            "https://api.zuxi.dev/api/v6/vrcx/search",
+	    "https://avtr.just-h.party/vrcx_search.php"
+        ];
+
+        if (currentIndex < links.length) {
+            const fullURL = baseURL + links[currentIndex]; // Concatenate directly
+            window.open(fullURL); // Open the current link
+            currentIndex++; // Move to the next link
+        } else {
+            alert("All avatar databases have been added!"); // Alert when all links are used
+        }
+    }
+
+    function openVRCX() {
+        // Optional: Show feedback message
+        const feedback = document.getElementById("feedback");
+        feedback.style.display = "block"; // Show feedback
+        setTimeout(() => {
+            feedback.style.display = "none"; // Hide after 2 seconds
+        }, 2000);
+    }
+</script>
+<script>
+async function updatePrices() {
+    const appIds = []; // Replace with actual app IDs
+    const prices = await Promise.all(appIds.map(appId => 
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/appdetails?appids=${appId}`)}`)
+            .then(response => response.json())
+            .then(data => JSON.parse(data.contents))
+            .then(jsonData => {
+                if (jsonData[appId] && jsonData[appId].success) {
+                    return jsonData[appId].data.price_overview ? 
+                        `$${(jsonData[appId].data.price_overview.final / 100).toFixed(2)}` : 'Not available';
+                } else {
+                    console.error(`Failed to fetch price data for app ID: ${appId}`);
+                    return 'Error';
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                return 'Error';
+            })
+    ));
+
+    // Update HTML elements with prices
+    document.getElementById('price-').innerText = prices[0]; // Original Game 1
+    document.getElementById('price-').innerText = prices[1]; // Game 2
+    document.getElementById('price-').innerText = prices[2]; // Game 3
+    document.getElementById('price-').innerText = prices[3]; // Game 4
+    document.getElementById('price-').innerText = prices[4]; // Game 5
+}
+
+window.onload = updatePrices;
+
+</script>
+
+<footer style="text-align: center; margin-top: 20px; color: #fff;">
+        Made and upkeeped by <a href="https://discord.com/users/261935450481098753" style="color: #008b8b; text-decoration: none;">Mɾ_̆̈Ọυαȥι</a> 
+        for questions or suggestions DM me</a>
+    </footer>
+</body>
+</html>
