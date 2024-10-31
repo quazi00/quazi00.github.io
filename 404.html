@@ -1,220 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>404</title>
-	<!-- from https://github.com/rodneyrehm/you-are-an-idiot --!>
-	<!--
-	    Original Flash Movie: http://youareanidiot.org/
-	    Audio from http://shane-o.com/sound-drops/163-idiot-drop
-	    This implementation: Rodney Rehm - http://rodneyrehm.de/en/
-	-->
-	
-	<style>
-	    body {
-	        margin: 0; 
-	        padding: 0; 
-	        font-family: Comic Sans;
-	        font-weight: bold;
-	        font-size: 16px;
-            color: #CCC;
-	        background: white;
-	        -webkit-transition: background-color 0.05s ease-in 0s,
-	                            color 0.05s ease-in 0s;
-	                transition: background-color 0.05s ease-in 0s,
-	                            color 0.05s ease-in 0s;
-	    }
-	    
-	    .browser-fail .happy {
-	        display: none;
-	    }
-	    
-	    .no-track {
-	        color: black;
-	    }
-	    
-	    #idiot-text,
-	    #idiot-face {
-	        display: block;
-            padding: 1em;
-	        text-align: center;
-	        font-size: 4em;
-	    }
-	    
-	    #idiot-text span {
-	        white-space: nowrap;
-	    }
-	    
-	    #idiot-face {
-	        padding: 0;
-	        font-size: 10em;
-	        color: black;
-	    }
-	    
-	    .visited {
-	        color: #666;
-	    }
-	    
-	    .active {
-	        color: #336699;
-	    }
-	    
-	    .inverted {
-	        background: black;
-	        color: #333;
-	    }
-	    
-	    .inverted.no-track {
-	        color: white;
-	    }
-	    
-	    .inverted .visited {
-	        color: #AAA;
-	    }
-	    
-	    .inverted .active {
-	        color: #6699CC;
-	    }
-	    
-	    .inverted #idiot-face {
-	        color: white;
-	    }
-	    
-        @media only screen and (min-width: 1000px) {
-	        body {
-	            width: 1000px;
-	            margin: 0 auto;
-	        }
-	    }
-	    
-        @media only screen and (max-width: 400px) {
-            body {
-                font-size: 10px;
-            }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404: Terminal Intrusion Detected</title>
+    <style>
+        /* Fullscreen Terminal Styles */
+        body {
+            background-color: #00000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-	</style>
+
+        .terminal {
+            width: 100vw;
+            height: 100vh;
+            background: #000000;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output {
+            flex: 1;
+            white-space: pre-wrap;
+            font-size: 1.2em;
+            line-height: 1.5;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .input-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .prompt {
+            color: #00ff00;
+            margin-right: 10px;
+        }
+
+        .input {
+            outline: none;
+            border: none;
+            background: transparent;
+            color: #00ff00;
+            font-size: 1.2em;
+            flex: 1;
+        }
+
+        .suggestions {
+            color: #ff6666;
+            font-size: 0.9em;
+        }
+
+        .link {
+            color: #00ff00;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+		a {
+		color: #00ff00;
+		 text-decoration: underline;
+         cursor: pointer;
+		 }
+    </style>
 </head>
 <body>
-    
-    <output id="idiot-text">
-        <span id ="idiot-cue-1">you</span>
-        <span id ="idiot-cue-2">are</span>
-        <span id ="idiot-cue-3">an</span>
-        <span id ="idiot-cue-4">idiot</span>
-        <span id ="idiot-cue-5">ah</span>
-        <span id ="idiot-cue-6">haha</span>
-        <span id ="idiot-cue-7">ha ha ha</span>
-        <span id ="idiot-cue-8">aha ha</span>
-        <span id ="idiot-cue-9">ha ha</span>
-        <span id ="idiot-cue-10">ha</span>
-    </output>
-    
-    <output id="idiot-face">
-        <span class="smiley happy">☺</span>
-        <span class="smiley sad">☹</span>
-        <span class="smiley happy">☺</span>
-    </output>
-    
-    <audio id="idiot-audio" volume="0.2" auto-play="on" lo-op="true">
-        <source src="https://github.com/rodneyrehm/you-are-an-idiot/raw/refs/heads/master/audio/idiot.mp3" type="audio/mp3">
-        <source src="https://github.com/rodneyrehm/you-are-an-idiot/raw/refs/heads/master/audio/idiot.ogg" type="audio/ogg">
-        <source src="https://github.com/rodneyrehm/you-are-an-idiot/raw/refs/heads/master/audio/idiot.wav" type="audio/wav">
-    </audio>
-    
+    <div class="terminal">
+        <div class="output" id="output">
+            TERMINAL // ACCESS DENIED 404<br>
+            [SYSTEM: Intrusion Detected]<br><br>
+            WARNING: Attempting to locate page... failed.<br>
+            You’ve ventured into forbidden territory.<br><br>
+           <span class="suggestions">Try typing <code>help</code></span><br><br>
+        </div>
+        <div class="input-line">
+            <span class="prompt">&gt;</span>
+            <input type="text" class="input" id="terminal-input" autofocus>
+        </div>
+    </div>
+
     <script>
-        (function() {
-            "use strict";
-            
-            var output = document.getElementById('idiot-text');
-            var audio = document.getElementById('idiot-audio');
-            
-            if (!window.Audio) {
-                output.innerHTML = 'Your Browser Is An Idiot!';
-                document.body.className = 'browser-fail';
-                console.error('Audio not supported');
-                return;
-            }
+        const terminalOutput = document.querySelector('.output');
+        const input = document.querySelector('.input');
 
-            if (Audio.prototype.addTextTrack) {
-                var track = audio.addTextTrack('metadata');
-                var cues = [
-                    {start: 0.040, stop: 0.474, id: 'idiot-cue-1', text: "you"},
-                    {start: 0.580, stop: 0.860, id: 'idiot-cue-2', text: "are"},
-                    {start: 0.860, stop: 1.013, id: 'idiot-cue-3', text: "an"},
-                    {start: 1.069, stop: 1.672, id: 'idiot-cue-4', text: "idiot"},
-                    {start: 1.945, stop: 2.112, id: 'idiot-cue-5', text: "ah"},
-                    {start: 2.234, stop: 2.566, id: 'idiot-cue-6', text: "haha"},
-                    {start: 2.593, stop: 3.131, id: 'idiot-cue-7', text: "ha ha ha"},
-                    {start: 3.207, stop: 3.802, id: 'idiot-cue-8', text: "aha ha"},
-                    {start: 3.871, stop: 4.397, id: 'idiot-cue-9', text: "ha ha"},
-                    {start: 4.494, stop: 4.883, id: 'idiot-cue-10', text: "ha"}
-                ];
+        // Function to scroll to the bottom
+        function scrollToBottom() {
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
 
-                cues.forEach(function(cue) {
-                    track.addCue(new TextTrackCue(cue.start, cue.stop, cue.id));
-                });
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                const command = input.value.trim().toLowerCase();
+                input.value = '';
 
-                track.addEventListener('cuechange', function(event) {
-                    if (!track.activeCues.length) {
-                        return;
-                    }
-
-                    // TODO: improve this
-                    [].forEach.call(output.querySelectorAll('.active'), function(node) {
-                        node.classList.remove('active');
-                    });
-                    
-                    var id = track.activeCues[0].text;
-                    document.getElementById(id).className = 'visited active';
-                    document.body.offsetTop;
-                });
-            } else {
-                document.body.classList.add('no-track');
-                console.error('Audio.prototype.addTextTrack() not supported');
-            }
-            
-            audio.addEventListener('play', function(event) {
-                [].forEach.call(output.childNodes, function(node) {
-                    node.className = '';
-                });
-            });
-
-            // loop prevents ended event (in Chrome), but wee need something to reset the canvas
-            // audio.loop = true;
-            audio.addEventListener('ended', function(event) {
-                setTimeout(function() {
-                    audio.currentTime = 0;
-                    audio.play();
-                }, 200);
-            });
-
-            document.addEventListener('keydown', toggle);
-            document.addEventListener('touchend', toggle);
-            document.addEventListener('mouseup', toggle);
-            
-            function toggle(event) {
-                if (event.type === 'keydown' && event.keyCode != 32) {
-                    return;
+                let response = '';
+                switch (command) {
+                    case 'help':
+                        response = `DIR - lists all webpages<br>PING - pong<br>CONTACT - Get In Contact With Someone<br>IDIOT - You Are An Idiot<br>CLEAR - Clears All Text`;
+                        break;
+                    case 'dir':
+                        response = `SYSTEM LOCATEING ALL FILES IN DIRECTORY / / <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι's nameplate</a> <a href="https://qu4z1.xyz/vrcxthemes">VRCXThemes</a> <a href="https://qu4z1.xyz/vrcsoftware">VRCSoftware</a>`;
+                        break;
+					case 'ping':
+                        response = `PINGING PORNHUB.COM ... <br> <a href="https://ponggame.io/">pong</a> `;
+                        break;
+					case 'contact':
+                        response = `LOOKING FOR CONTACT INFO: / / For Any Information Or Suggestions Please Go To <a href="https://discord.gg/cRTseD5TeG">This Sites Discord</a> Or Contact <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι<a/> Directy `;
+                        break;
+					case 'idiot':
+                        // Redirect to the specified URL
+                        window.location.href = 'https://youareanidiot.cc';
+                        return; // Exit the function to prevent further processing
+						break;
+					case 'clear':
+						terminalOutput.innerHTML = ''; // Clear the terminal output
+						return; // Exit the function to prevent further processing
+					brake;
+                    default:
+                        response = `Unknown command: "${command}". Try again.`;
                 }
-                
-                event.preventDefault();
-                event.stopPropagation();
-                
-                audio[audio.paused ? 'play' : 'pause']();
-            }
-            
-            function invertBackground() {
-                if (!audio.paused) {
-                    document.body.classList.toggle('inverted');
-                }
-                
-                return setTimeout(invertBackground, 500);
-            }
-            
-            audio.play();
-            invertBackground();
 
-        })();
+                // Append the command and response to the output
+                terminalOutput.innerHTML += `<br>&gt; ${command}<br>${response}<br>`;
+                scrollToBottom();  // Scroll to the latest output
+            }
+        });
     </script>
 </body>
 </html>
