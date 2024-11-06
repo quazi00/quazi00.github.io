@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation</title>
+    <link rel="icon" href="https://qu4z1.xyz/resources/favicons/vrcxthemesfavicon.ico" type="image/png">
+    <meta content="https://qu4z1.xyz/resources/favicons/vrcsoftwareicon.png" property="og:image">
+    <meta property="og:title" content="Installation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://qu4z1.xyz/vrcxthemes/installation" />
+    <meta property="og:description" content="How to install a VRCX theme: 1. Download theme zip file > 2. Extract and locate custom.css > 3. Place custom.css in your VRCX AppData folder > 4. Open VRCX and press ALT + SHIFT + R to load the theme." />
+    <meta name="theme-color" content="#0F9D58"/>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #e0e0e0;
+            background-color: #1e1e1e;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00e5ff;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #292929;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content p, .content li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin: 10px 0;
+        }
+
+        /* Key Button Styling */
+        .key {
+            display: inline-block;
+            background-color: #3a3a3a;
+            color: #e0e0e0;
+            padding: 3px 8px;
+            margin: 0 3px;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.2s ease;
+        }
+
+        .key:hover {
+            background-color: #555;
+        }
+
+        /* Download Link Styling */
+        .download-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #00796b;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .download-link:hover {
+            background-color: #004d40;
+            text-decoration: underline;
+        }
+
+        /* Nested List Styling */
+        ol {
+            padding-left: 1em;
+        }
+
+        ol ol {
+            padding-left: 1.5em;
+        }
+
+        /* Image Styling */
+        .appdata-button-img {
+            width: 350px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>How to Install a Custom CSS Theme</h2>
+        <p>Follow these steps to add a custom theme to your VRCX application:</p>
+        <ol>
+            <li>
+                <strong>Download the Theme:</strong>
+                <p>Download the theme’s zip file from the <a href="http://qu4z1.xyz/vrcxthemes" class="download-link">VRCX Themes Page</a>.</p>
+            </li>
+            <li>
+                <strong>Extract the Files:</strong>
+                <p>Extract the downloaded zip file and locate the <code>custom.css</code> file.</p>
+            </li>
+            <li>
+                <strong>Place the CSS File:</strong>
+                <p>Navigate to your VRCX folder and place the <code>custom.css</code> file there.</p>
+                <ol>
+                    <li>Press <span class="key">Win</span> + <span class="key">R</span> on your keyboard to open the Run dialog.</li>
+                    <li>Type <code>%appdata%\VRCX</code> and press <span class="key">Enter</span>.</li>
+                    <li>Place the <code>custom.css</code> file in the <code>VRCX</code> folder.</li>
+                    <li>Ensure the file is named <code>custom.css</code> for it to apply correctly.</li>
+                </ol>
+                <p><strong>Alternatively:</strong></p>
+                <ol>
+                    <li>Go to <strong>VRCX > Settings > Advanced</strong>.</li>
+                    <li>
+                        Click the <strong>AppData (VRCX)</strong> button to open the folder.
+                        <br>
+                        <img src="https://qu4z1.xyz/resources/images/appdata-button.png" alt="AppData button in VRCX settings" class="appdata-button-img">
+                    </li>
+                    <li>Place the <code>custom.css</code> file in the opened folder.</li>
+                    <li>Ensure the file is named <code>custom.css</code> for it to apply correctly.</li>
+                </ol>
+            </li>
+            <li>
+                <strong>Reload the Theme:</strong>
+                <p>Press <span class="key">ALT</span> + <span class="key">SHIFT</span> + <span class="key">R</span> to reload the theme and see your changes.</p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
