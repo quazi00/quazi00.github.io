@@ -301,6 +301,15 @@
         <td id="price-1009850">????</td>
     </tr>
     <tr>
+        <td>Virtual Handeld</td>
+        <td>Steam VR Plugin</td>
+        <td>Play any game you can run along side vr or on a seprate pc on a virtual handheld</td>
+        <td>zannyCat</td>
+        <td><a href="https://discord.gg/Qpwf44Masc">Discord</a></td>
+        <td><a href="https://store.steampowered.com/app/2622140/Virtual_Handheld/">Steam</a></td>
+        <td id="price-2622140">????</td>
+    </tr>
+    <tr>
         <td>OVR tool kit</td>
         <td>Steam VR Plugin</td>
         <td>Easily view and interact with your desktop in VR and more.</td>
@@ -458,7 +467,7 @@
 </script>
 <script>
 async function updatePrices() {
-    const appIds = [1173510, 1009850, 2370570, 908520, 1068820]; // Replace with actual app IDs
+    const appIds = [1173510, 1009850, 2370570, 908520, 1068820, 2622140]; // Replace with actual app IDs
     const prices = await Promise.all(appIds.map(appId => 
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/appdetails?appids=${appId}`)}`)
             .then(response => response.json())
@@ -484,6 +493,7 @@ async function updatePrices() {
     document.getElementById('price-2370570').innerText = prices[2]; // Game 3
     document.getElementById('price-908520').innerText = prices[3]; // Game 4
     document.getElementById('price-1068820').innerText = prices[4]; // Game 5
+    document.getElementById('price-2622140').innerText = prices[4]; // Game 6
 }
 
 window.onload = updatePrices;
