@@ -36,6 +36,7 @@
             line-height: 1.5;
             overflow-y: auto;
             overflow-x: hidden;
+			
         }
 
         .input-line {
@@ -67,11 +68,54 @@
             text-decoration: underline;
             cursor: pointer;
         }
-		a {
-		color: #00ff00;
-		 text-decoration: underline;
-         cursor: pointer;
-		 }
+        a {
+            color: #00ff00;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Custom Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            width: 300px;
+            text-align: center;
+            z-index: 9999;
+        }
+
+        .popup h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .popup p {
+            font-size: 1.2em;
+        }
+
+        .popup button {
+            background-color: #00ff00;
+            color: #000000;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .popup button:hover {
+            background-color: #00cc00;
+        }
     </style>
 </head>
 <body>
@@ -89,52 +133,113 @@
         </div>
     </div>
 
-    <script>
-        const terminalOutput = document.querySelector('.output');
-        const input = document.querySelector('.input');
+    <div class="popup" id="popup">
+        <h2>404 Brotherhood Dose Not Accept You.</h2>
+        <p></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
 
-        // Function to scroll to the bottom
-        function scrollToBottom() {
-            terminalOutput.scrollTop = terminalOutput.scrollHeight;
-        }
+<script>
+    const terminalOutput = document.querySelector('.output');
+    const input = document.querySelector('.input');
+    const popup = document.getElementById('popup');
 
-        input.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') {
-                const command = input.value.trim().toLowerCase();
-                input.value = '';
+    // Function to scroll to the bottom
+    function scrollToBottom() {
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
 
-                let response = '';
-                switch (command) {
-                    case 'help':
-                        response = `DIR - lists all webpages<br>PING - pong<br>CONTACT - Get In Contact With Someone<br>IDIOT - You Are An Idiot<br>CLEAR - Clears All Text`;
-                        break;
-                    case 'dir':
-                        response = `SYSTEM LOCATEING ALL FILES IN DIRECTORY / / <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι's nameplate</a> <a href="https://qu4z1.xyz/vrcxthemes">VRCXThemes</a> <a href="https://qu4z1.xyz/vrcsoftware">VRCSoftware</a>`;
-                        break;
-					case 'ping':
-                        response = `PINGING PORNHUB.COM ... <br> <a href="https://ponggame.io/">pong</a> `;
-                        break;
-					case 'contact':
-                        response = `LOOKING FOR CONTACT INFO: / / For Any Information Or Suggestions Please Go To <a href="https://discord.gg/cRTseD5TeG">This Sites Discord</a> Or Contact <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι<a/> Directy `;
-                        break;
-					case 'idiot':
-                        // Redirect to the specified URL
-                        window.location.href = 'https://youareanidiot.cc';
-                        return; // Exit the function to prevent further processing
-						break;
-					case 'clear':
-						terminalOutput.innerHTML = ''; // Clear the terminal output
-						return; // Exit the function to prevent further processing
-					brake;
-                    default:
-                        response = `Unknown command: "${command}". Try again.`;
-                }
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const command = input.value.trim().toLowerCase();
+            input.value = '';
 
-                // Append the command and response to the output
-                terminalOutput.innerHTML += `<br>&gt; ${command}<br>${response}<br>`;
-                scrollToBottom();  // Scroll to the latest output
+            let response = '';
+            switch (command) {
+                case 'help':
+                    response = `DIR - lists all webpages<br>PING - pong<br>CONTACT - Get In Contact With Someone<br>IDIOT - You Are An Idiot<br>CLEAR - Clears All Text`;
+                    break;
+                case 'dir':
+                    response = `SYSTEM LOCATEING ALL FILES IN DIRECTORY / / <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι's nameplate</a> <a href="https://qu4z1.xyz/vrcxthemes">VRCXThemes</a> <a href="https://qu4z1.xyz/vrcsoftware">VRCSoftware</a>`;
+                    break;
+                case 'ping':
+                    response = `PINGING PORNHUB.COM ... <br> <a href="https://ponggame.io/">pong</a>`;
+                    break;
+                case 'contact':
+                    response = `LOOKING FOR CONTACT INFO: / / For Any Information Or Suggestions Please Go To <a href="https://discord.gg/cRTseD5TeG">This Sites Discord</a> Or Contact <a href="https://qu4z1.xyz">Mɾ_Ọυαȥι<a/> Directly`;
+                    break;
+                case 'idiot':
+                    // Redirect to the specified URL
+                    window.location.href = 'https://youareanidiot.cc';
+                    return; // Exit the function to prevent further processing
+                case 'clear':
+                    terminalOutput.innerHTML = ''; // Clear the terminal output
+                    return; // Exit the function to prevent further processing
+					let commandHistory = [];
+
+                case 'drip':
+                    window.location.href = 'vrcx://import/avatar/avtr_3f38339e-cd04-4559-866d-4517ac6b7eb7,avtr_902bcc5a-b108-40d4-b393-ea7b055e316e';
+                    return; 
+                case '404brotherhood':
+				case '404 brotherhood':
+                    // Fill the page with '[REDACTED]' rapidly and reload after effect
+                    let redactedCount = 0;
+                    const redactedInterval = setInterval(() => {
+                        terminalOutput.innerHTML += `[REDACTED] `;
+                        scrollToBottom();
+                        redactedCount++;
+                        if (redactedCount >= 1000) {  // Adjust the count for the desired dramatic effect
+                            clearInterval(redactedInterval);
+                            setTimeout(() => {
+                                location.reload(); // Reload the page after a brief delay
+                            }, 1000);
+                        }
+                    }, 1); // Adjust the speed of the '[REDACTED]' filling
+                    return; // Exit the function to prevent further processing
+                default:
+                    response = `Unknown command: "${command}". Try again.`;
             }
-        });
-    </script>
+
+            // Append the command and response to the output
+            terminalOutput.innerHTML += `<br>&gt; ${command}<br>${response}<br>`;
+            scrollToBottom();  // Scroll to the latest output
+        }
+    });
+
+    function showPopup() {
+        popup.style.display = 'block';
+		    let soundEffect = new Audio('https://qu4z1.xyz/resources/audio/error-sound.mp3');
+			soundEffect.play();
+    }
+
+    function closePopup() {
+        popup.style.display = 'none';
+    }
+
+    // Disable developer tools shortcuts
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "F12" || 
+            (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) || 
+            (event.ctrlKey && event.key === "U")) {
+            event.preventDefault();
+            showPopup(); // Show the popup when developer tools are triggered
+        }
+    });
+
+    // Block right-click context menu
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevents the right-click context menu
+    });
+	
+	// Block Ctrl + U
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'u') {
+            event.preventDefault(); // Prevents the default action (viewing the page source)
+            showPopup(); // Optionally, show the popup when Ctrl + U is pressed
+        }
+    });
+</script>
+
+
 </body>
 </html>
