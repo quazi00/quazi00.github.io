@@ -467,7 +467,7 @@
 </script>
 <script>
 async function updatePrices() {
-    const appIds = [1173510, 1009850, 2370570, 908520, 1068820, 2622140]; // Replace with actual app IDs
+    const appIds = [1173510, 1009850, 2370570, 908520, 1068820, 2622140, 2324090]; // Replace with actual app IDs
     const prices = await Promise.all(appIds.map(appId => 
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/appdetails?appids=${appId}`)}`)
             .then(response => response.json())
@@ -493,7 +493,8 @@ async function updatePrices() {
     document.getElementById('price-2370570').innerText = prices[2]; // Game 3
     document.getElementById('price-908520').innerText = prices[3]; // Game 4
     document.getElementById('price-1068820').innerText = prices[4]; // Game 5
-    document.getElementById('price-2622140').innerText = prices[4]; // Game 6
+    document.getElementById('price-2324090').innerText = prices[0]; // vrhandsframe
+    document.getElementById('price-2622140').innerText = prices[4]; // Vurtial handheld
 }
 
 window.onload = updatePrices;
