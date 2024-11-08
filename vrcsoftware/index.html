@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -117,7 +118,9 @@
 	.tooltip:hover .tooltip-content {
 		visibility: visible;
 }
-
+	.sort {
+	 cursor: url('https://qu4z1.xyz/resources/cursor/hand32.png'), auto;
+}
     </style>
 </head>
 <body>
@@ -137,29 +140,29 @@
         <td>TYPE</td>
        	<td>DESCRIPTION</td>
         <td>CREATORS DISCORD NAME</td>
-       	<td><a href="INVITE LINK">Discord</a></td>
-        <td><a href="WEBSITE LINK">Github Website Direct Download...</a></td>
+       	<td><a target="_blank"  href="INVITE LINK">Discord</a></td>
+        <td><a target="_blank"  href="WEBSITE LINK">Github Website Direct Download...</a></td>
         <td>PRICE</td>
     </tr>
 -->
-	    <tr>
-            <th>Software Name</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Creator Discord/Name</th>
-            <th>Discord</th>
-            <th>Website</th>
-            <th>Price</th>
-        </tr>
+		<tr>
+		<th>Software Name</th>
+			<th><span onclick="sortTable(1)" class="sort">Type↑↓</span></th>
+			<th>Description</th>
+			<th>Creator Discord/Name</th>
+			<th>Discord</th>
+			<th>Website</th>
+			<th><span onclick="sortTable(6)" class="sort">Price↑↓</span></th>
+		</tr>
     </thead>
     <tbody>
       <tr>
-            <td><a class="no-style" onclick="addNextAvatarDB()" >VRCX</a></td>
+            <td><a class="no-style" onclick="addNextAvatarDB()" >VRCX</a> <small><small><a href="https://qu4z1.xyz/vrcxthemes">Themes?</a></small></small></td>
             <td>Software</td>
             <td>API GUI client (a.k.a. a better version of the website).</td>
             <td>pypy-vrc & natsumida</td>
-            <td><a href="https://vrcx.pypy.moe/discord">Discord</a></td>
-            <td><a href="https://github.com/vrcx-team/VRCX">Github</a></td>
+            <td><a target="_blank"  href="https://vrcx.pypy.moe/discord">Discord</a></td>
+            <td><a target="_blank"  href="https://github.com/vrcx-team/VRCX">Github</a></td>
             <td>Free</td>
         </tr>
 	        <tr>
@@ -173,8 +176,8 @@
 		</span>
 		</td>
         <td>officiallynull</td>
-       	<td><a href="INVITE LINK">Discord</a></td>
-        <td><a href="https://invalid.one/public/VRCSnaxLoader.exe">Direct Download</a></td>
+       	<td><a target="_blank"  href="INVITE LINK">Discord</a></td>
+        <td><a target="_blank"  href="https://invalid.one/public/VRCSnaxLoader.exe">Direct Download</a></td>
         <td>Free</td>
     </tr> -->
         <tr>
@@ -183,7 +186,7 @@
             <td> Let's you see when you took a picture, which world you were in, and who was there.</td>
             <td>Curtis English</td>
             <td>N/A</td>
-            <td><a href="https://github.com/Curtis-VL/VRCXMetadata?tab=readme-ov-file">Github</a></td>
+            <td><a target="_blank"  href="https://github.com/Curtis-VL/VRCXMetadata?tab=readme-ov-file">Github</a></td>
             <td>Free</td>
         </tr>
         <tr>
@@ -191,8 +194,8 @@
             <td>Software</td>
             <td>Hotswaps between emojis and stickers using a browser extension.</td>
             <td>Lamp</td>
-            <td><a href="https://discord.gg/ezC3TmtMQw">Discord</a></td>
-            <td><a href="https://gitea.moe/lamp/vrchat-emoji-manager">Github</a>|<a href="https://chromewebstore.google.com/detail/vrchat-emoji-and-sticker/obmoelidfamikmdhgjeoacpmkfhohekb ">Chrome</a></td>
+            <td><a target="_blank"  href="https://discord.gg/ezC3TmtMQw">Discord</a></td>
+            <td><a target="_blank"  href="https://gitea.moe/lamp/vrchat-emoji-manager">Github</a>|<a target="_blank"  href="https://chromewebstore.google.com/detail/vrchat-emoji-and-sticker/obmoelidfamikmdhgjeoacpmkfhohekb ">Chrome</a></td>
             <td>Free</td>
         </tr>
         <tr>
@@ -203,7 +206,7 @@
             <td>Converter tool from GIF to VRC compatible sprite sheets for animated emojis.</td>
             <td>Wakamu</td>
             <td>N/A</td>
-            <td><a href="https://github.com/Wakamu/VRCEmoji">Github</a></td>
+            <td><a target="_blank"  href="https://github.com/Wakamu/VRCEmoji">Github</a></td>
             <td>Free</td>
         </tr>
 		<tr>
@@ -211,8 +214,8 @@
         <td>Software</td>
         <td>Voice-to-text program for your chatbox.</td>
         <td>ttsvoicewizard</td>
-        <td><a href="https://discord.gg/YjgR9SWPnW">Discord</a></td>
-        <td><a href="https://github.com/VRCWizard/TTS-Voice-Wizard">Github</a></td>
+        <td><a target="_blank"  href="https://discord.gg/YjgR9SWPnW">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/VRCWizard/TTS-Voice-Wizard">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -222,8 +225,8 @@
         <td>Software</td>
         <td>Displays different things in your chatbox, like PC specs and music.</td>
         <td>izurubae</td>
-        <td><a href="https://discord.gg/ZaSFwBfhvG">Discord</a></td>
-        <td><a href="https://github.com/BoiHanny/vrcosc-magicchatbox">Github</a></td>
+        <td><a target="_blank"  href="https://discord.gg/ZaSFwBfhvG">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/BoiHanny/vrcosc-magicchatbox">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -231,8 +234,8 @@
         <td>Software</td>
         <td>A router application that allows OSC packets to be routed to multiple applications.</td>
         <td>SutekhVRC</td>
-        <td><a href="https://discord.gg/g6kUFtMtpw">Discord</a></td>
-        <td><a href="https://github.com/SutekhVRC/VOR">Github</a></td>
+        <td><a target="_blank"  href="https://discord.gg/g6kUFtMtpw">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/SutekhVRC/VOR">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -241,7 +244,7 @@
         <td>Controls a partner's toggles on their model from your PC.</td>
         <td>officiallynull</td>
         <td>N/A</td>
-        <td><a href="https://invalid.one/public/iListen.exe">DirectDownload</a></td>
+        <td><a target="_blank"  href="https://invalid.one/public/iListen.exe">DirectDownload</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -249,8 +252,8 @@
         <td>Software</td>
         <td>Stores world save codes in a local backup automatically.</td>
         <td>kittenji</td>
-        <td><a href="https://discord.gg/Anpm8d3fPD">Discord</a></td>
-        <td><a href="https://github.com/ChrisFeline/ToNSaveManager?tab=readme-ov-file#discord-server--vrchat-groupp">Github</a></td>
+        <td><a target="_blank"  href="https://discord.gg/Anpm8d3fPD">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/ChrisFeline/ToNSaveManager?tab=readme-ov-file#discord-server--vrchat-groupp">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -259,7 +262,7 @@
         <td>Resets your shown users every time you launch VRC.</td>
         <td>zkxs</td>
         <td>N/A</td>
-        <td><a href="https://github.com/zkxs/hooligan">Github</a></td>
+        <td><a target="_blank"  href="https://github.com/zkxs/hooligan">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -267,8 +270,8 @@
         <td>Software</td>
         <td>scans your local cache for avatar IDs and sends them to avatar search worlds and websites.</td>
         <td>shaybox</td>
-        <td><a href="https://discord.shaybox.com/">Discord</a></td>
-        <td><a href="https://github.com/ShayBox/VRC-LOG">Github</a></td>
+        <td><a target="_blank"  href="https://discord.shaybox.com/">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/ShayBox/VRC-LOG">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -276,8 +279,8 @@
         <td>Software</td>
        	<td> Move a player in the direction of a stretched Physbone For leashes, tails, or even hand holding</td>
         <td>zenithval</td>
-       	<td><a href="https://discord.gg/7VAm3twDyy">Discord</a></td>
-        <td><a href="https://github.com/ZenithVal/OSCLeash">Github</a></td>
+       	<td><a target="_blank"  href="https://discord.gg/7VAm3twDyy">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/ZenithVal/OSCLeash">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -287,8 +290,8 @@
         <td>Software</td>
         <td>lets you take multapule audio inputs (i.e your mic and some music or sound board) and turn it into 1 audio output aka play music on your mic</td>
         <td>vburel</td>
-        <td><a href="https://discord.com/invite/TF42rahAXS">Discord</a></td>
-        <td><a href="https://vb-audio.com/Voicemeeter/banana.htm">Website</a></td>
+        <td><a target="_blank"  href="https://discord.com/invite/TF42rahAXS">Discord</a></td>
+        <td><a target="_blank"  href="https://vb-audio.com/Voicemeeter/banana.htm">Website</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -296,8 +299,8 @@
         <td>Steam VR Plugin</td>
         <td>Lets you grab and move your playspace.</td>
         <td>feilen</td>
-        <td><a href="https://discord.com/invite/vgvSkSk">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1009850/OVR_Advanced_Settings/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.com/invite/vgvSkSk">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/1009850/OVR_Advanced_Settings/">Steam</a></td>
         <td id="price-1009850">????</td>
     </tr>
     <tr>
@@ -305,8 +308,8 @@
         <td>Steam VR Plugin</td>
         <td>Play any game you can run along side vr or on a seprate pc on a virtual handheld</td>
         <td>zannyCat</td>
-        <td><a href="https://discord.gg/Qpwf44Masc">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/2622140/Virtual_Handheld/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.gg/Qpwf44Masc">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/2622140/Virtual_Handheld/">Steam</a></td>
         <td id="price-2622140">????</td>
     </tr>
     <tr>
@@ -314,8 +317,8 @@
         <td>Steam VR Plugin</td>
         <td>Easily view and interact with your desktop in VR and more.</td>
         <td>curtisvl</td>
-        <td><a href="https://discord.gg/rGWjyCz">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1068820/OVR_Toolkit/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.gg/rGWjyCz">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/1068820/OVR_Toolkit/">Steam</a></td>
         <td id="price-1068820"> ???? </td>
     </tr>
     <tr>
@@ -324,7 +327,7 @@
         <td>FPS tracker for VR.</td>
         <td>Sergio</td>
         <td>N/A</td>
-        <td><a href="https://store.steampowered.com/app/908520/fpsVR/">Steam</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/908520/fpsVR/">Steam</a></td>
         <td id="price-908520">????</td>
     </tr>
     <tr>
@@ -332,8 +335,8 @@
         <td>Steam VR Plugin</td>
         <td>Calorie counter for VR.</td>
         <td>tickyotacky</td>
-        <td><a href="https://discord.gg/yur">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1173510/YUR/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.gg/yur">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/1173510/YUR/">Steam</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -342,7 +345,7 @@
         <td>Lets you place monitors in VR.</td>
         <td>elvissteinjr</td>
         <td>N/A</td>
-        <td><a href="https://store.steampowered.com/app/1494460/Desktop/">Steam</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/1494460/Desktop/">Steam</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -350,8 +353,8 @@
         <td>Steam VR Plugin</td>
         <td>Fake full body (full body estimation).</td>
         <td>I3Llamas</td>
-        <td><a href="https://discord.gg/Z6NnSqNYr6">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/2370570/Standable_Full_Body_Estimation/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.gg/Z6NnSqNYr6">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/2370570/Standable_Full_Body_Estimation/">Steam</a></td>
         <td id="price-2370570">????</td>
     </tr>
     <tr>
@@ -359,26 +362,26 @@
         <td>Steam VR Plugin</td>
         <td>Detects when you're sleeping and automates actions like status.</td>
         <td>raphiiko</td>
-        <td><a href="https://discord.gg/7MqdPJhYxC">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/2538150/OyasumiVR__VR_Sleeping_Utilities/">Steam</a></td>
+        <td><a target="_blank"  href="https://discord.gg/7MqdPJhYxC">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/2538150/OyasumiVR__VR_Sleeping_Utilities/">Steam</a></td>
         <td>Free</td>
     </tr>
 	<tr>
-        <td>xsoverlay</td>
+        <td>OVR Dynamic Resolution</td>
         <td>Steam VR Plugin</td>
-        <td>Better OVR Toolkit.</td>
-        <td>xiexe</td>
-        <td><a href="https://discord.gg/bCUHVeX7BR">Discord</a></td>
-        <td><a href="https://store.steampowered.com/app/1173510/XSOverlay/">Steam</a></td>
-        <td id="price-1173510" >????</td>
+        <td>Dynamically adjusts your HMD's resolution depending on your GPU frametime, CPU frametime and VRAM</td>
+        <td>Louka Lemire</td>
+        <td>N/A</td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/3243840/OVR_Dynamic_Resolution/">Steam</a></td>
+        <td>Free</td>
     </tr>
 	   <!--needs to be valadaited <tr>
        	<td>XSOverlay Keyboard OSC</td>
         <td>Steam VR Plugin+</td>
        	<td>Make XSOverlay a usable chatbox input for VRChat</td>
         <td>nyakoo</td>
-       	<td><a href="https://discord.gg/BrUacrw4cy">Discord</a></td>
-        <td><a href="https://github.com/nyakowint/xsoverlay-keyboard-osc">Github</a></td>
+       	<td><a target="_blank"  href="https://discord.gg/BrUacrw4cy">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/nyakowint/xsoverlay-keyboard-osc">Github</a></td>
         <td>Free</td>
     </tr> -->
     <tr>
@@ -386,8 +389,8 @@
         <td>Steam VR Plugin</td>
         <td>Translates, takes pictures, and scans QR codes with a gesture. Older free version on booth.</td>
         <td>eurekaworks</td>
-        <td><a href="https://discord.gg/Tr43Y2gQXM">Discord</a></td>
-        <td><a href="https://booth.pm/ja/items/3884551">booth</a>|<a href="https://store.steampowered.com/app/2324090/VRHandsFrame/">steam</a> </td>
+        <td><a target="_blank"  href="https://discord.gg/Tr43Y2gQXM">Discord</a></td>
+        <td><a target="_blank"  href="https://booth.pm/ja/items/3884551">booth</a>|<a target="_blank"  href="https://store.steampowered.com/app/2324090/VRHandsFrame/">steam</a> </td>
         <td id="price-2324090" >????</td>
     </tr>
     <tr>
@@ -396,16 +399,25 @@
         <td>Reduces jerkiness in full body tracking but increases latency.</td>
         <td>Yuumu</td>
         <td>N/A</td>
-        <td><a href="https://yuumu.booth.pm/items/4018006">Booth</a></td>
+        <td><a target="_blank"  href="https://yuumu.booth.pm/items/4018006">Booth</a></td>
         <td>Free</td>
+    </tr>
+		<tr>
+        <td>xsoverlay</td>
+        <td>Steam VR Plugin</td>
+        <td>Better OVR Toolkit.</td>
+        <td>xiexe</td>
+        <td><a target="_blank"  href="https://discord.gg/bCUHVeX7BR">Discord</a></td>
+        <td><a target="_blank"  href="https://store.steampowered.com/app/1173510/XSOverlay/">Steam</a></td>
+        <td id="price-1173510" >????</td>
     </tr>
     <tr>
         <td>VRC ANDROID ASSISTANT</td>
         <td>Mobile App</td>
-        <td>VRCX functionality for your phone and mobile notifications.</td>
+        <td>VRCX functionality for your Phone and Quest via side-loading.</td>
         <td>Veeni</td>
-        <td>BROKEN CURRENTLY</td>
-        <td><a href="https://github.com/Nyabsi/VRCAA">Github</a></td>
+        <td><a target="_blank"  href="https://discord.gg/aJs8qJXuT3">Discord</a></td>
+        <td><a target="_blank"  href="https://github.com/Nyabsi/VRCAA">Github</a></td>
         <td>Free</td>
     </tr>
     <tr>
@@ -414,7 +426,7 @@
         <td>The VRChat website as an app (no extra features).</td>
         <td>Tekiro</td>
         <td>N/A</td>
-        <td><a href="https://play.google.com/store/apps/developer?id=Tekiro&hl=en_US&gl=US">PlayStore</a></td>
+        <td><a target="_blank"  href="https://play.google.com/store/apps/developer?id=Tekiro&hl=en_US&gl=US">PlayStore</a></td>
         <td>Free</td>
     </tr>
         <!-- 
@@ -424,7 +436,7 @@
     <td>Notifys you of known avi rippers via a VRCX event OR beep</td>
     <td>just h party</td>
     <td>N/A</td>
-    <td><a href="https://yd.just-h.party" target="_blank">https://yd.just-h.party</a></td>
+    <td><a target="_blank"  href="https://yd.just-h.party" target="_blank">https://yd.just-h.party</a></td>
     <td>Free</td>
 </tr> 
 	    -->
@@ -467,7 +479,7 @@
 </script>
 <script>
 async function updatePrices() {
-    const appIds = [1173510, 1009850, 2370570, 908520, 1068820, 2622140, 2324090]; // Replace with actual app IDs
+    const appIds = [1173510, 1009850, 2370570, 908520, 1068820, 2622140, 2324090, 3243840]; // Replace with actual app IDs
     const prices = await Promise.all(appIds.map(appId => 
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/appdetails?appids=${appId}`)}`)
             .then(response => response.json())
@@ -488,22 +500,59 @@ async function updatePrices() {
     ));
 
     // Update HTML elements with prices
-    document.getElementById('price-1173510').innerText = prices[0]; // Original Game 1
-    document.getElementById('price-1009850').innerText = prices[1]; // Game 2
-    document.getElementById('price-2370570').innerText = prices[2]; // Game 3
-    document.getElementById('price-908520').innerText = prices[3]; // Game 4
-    document.getElementById('price-1068820').innerText = prices[4]; // Game 5
-    document.getElementById('price-2324090').innerText = prices[0]; // vrhandsframe
-    document.getElementById('price-2622140').innerText = prices[4]; // Vurtial handheld
+    document.getElementById('price-1173510').innerText = prices[0]; // xsoverlay
+    document.getElementById('price-1009850').innerText = prices[1]; // OVR advanced settings
+    document.getElementById('price-2370570').innerText = prices[2]; // standable
+    document.getElementById('price-908520').innerText = prices[3]; // FPS vr
+    document.getElementById('price-1068820').innerText = prices[4]; // OVR Toolkit
+    document.getElementById('price-2324090').innerText = prices[5]; // vrhandsframe
+    document.getElementById('price-2622140').innerText = prices[6]; // Vurtial handheld
 }
 
 window.onload = updatePrices;
 
 </script>
+<script>
+function sortTable(columnIndex) {
+    const table = document.querySelector('.software-table');
+    const rows = Array.from(table.querySelectorAll('tr')).slice(1); // Skip header row
+    const isAscending = table.dataset.sortOrder !== 'asc';
+
+    // Toggle the sorting order
+    table.dataset.sortOrder = isAscending ? 'asc' : 'desc';
+
+    rows.sort((a, b) => {
+        // Get the cell values and trim whitespace
+        let cellA = a.cells[columnIndex]?.textContent.trim().toLowerCase() || '';
+        let cellB = b.cells[columnIndex]?.textContent.trim().toLowerCase() || '';
+
+        // For text sorting (e.g., "Type" column), compare strings
+        if (columnIndex === 1) { // Change index if "Type" is another column
+            return isAscending 
+                ? cellA.localeCompare(cellB) 
+                : cellB.localeCompare(cellA);
+        }
+
+        // Sorting by Price (column 6)
+        if (columnIndex === 6) {
+            cellA = cellA === 'free' ? 0 : parseFloat(cellA.replace(/[^0-9.]/g, '')) || Infinity;
+            cellB = cellB === 'free' ? 0 : parseFloat(cellB.replace(/[^0-9.]/g, '')) || Infinity;
+            return isAscending ? cellA - cellB : cellB - cellA;
+        }
+
+        // Default case for other columns (string comparison)
+        return isAscending 
+            ? (cellA > cellB ? 1 : -1)
+            : (cellA < cellB ? 1 : -1);
+    });
+
+    // Re-append sorted rows to the table body
+    rows.forEach(row => table.appendChild(row));
+}
+</script>
 
 <footer style="text-align: center; margin-top: 20px; color: #fff;">
-        Made and upkeeped by <a href="https://discord.gg/cRTseD5TeG" style="color: #008b8b; text-decoration: none;">Mɾ_̆̈Ọυαȥι</a> 
-        for questions or suggestions DM me</a>
+        Made and upkeeped by <a href="https://qu4z1.xyz" target="_blank" >Mɾ_̆̈Ọυαȥι</a> for questions or suggestions join the <a target="_blank"  href="https://discord.gg/cRTseD5TeG" class="links">Discord</a></a>
     </footer>
 </body>
 </html>
