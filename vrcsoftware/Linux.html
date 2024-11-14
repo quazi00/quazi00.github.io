@@ -118,7 +118,9 @@
 	.tooltip:hover .tooltip-content {
 		visibility: visible;
 }
-
+.sort {
+	 cursor: url('https://qu4z1.xyz/resources/cursor/hand32.png'), auto;
+}
     </style>
 </head>
 <body>
@@ -143,15 +145,15 @@
         <td>PRICE</td>
     </tr>
 -->
-	    <tr>
-            <th>Software Name</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Creator Discord/Name</th>
-            <th>Discord</th>
-            <th>Website</th>
-            <th>Price</th>
-        </tr>
+<tr>
+    <th>Software Name</th>
+        <th><span onclick="sortTable(1)" class="sort">Type↑↓</span></th>
+        <th>Description</th>
+        <th>Creator Discord/Name</th>
+        <th>Discord</th>
+        <th>Website</th>
+        <th><span onclick="sortTable(6)" class="sort">Price↑↓</span></th>
+    </tr>
     </thead>
     <tbody>
       <tr>
@@ -160,7 +162,7 @@
             <td>API GUI client (a.k.a. a better version of the website).</td>
             <td>pypy-vrc & natsumida</td>
             <td><a href="https://vrcx.pypy.moe/discord">Discord</a></td>
-            <td><a href="https://github.com/vrcx-team/VRCX">github</a></td>
+            <td><a href="https://github.com/vrcx-team/VRCX">Github</a></td>
             <td>Free</td>
         </tr>
 	      <tr>
@@ -171,6 +173,33 @@
              <td>N/A</td>
             <td><a href="https://github.com/Taiko2k/Moonbeam">Github</a></td>
         <td>Free</td>
+        </tr>
+        <tr>
+            <td>Video-Workaround</td>
+            <td>Software</td>
+            <td>Dumb workaround that allows you to play video player content from a vrchat world in mpv</td>
+            <td>CrispyPin</td>
+            <td>N/A</td>
+            <td><a href="https://github.com/CrispyPin/vrchat-linux-video-workaround">Github</a></td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td>Vrc-Get</td>
+            <td>Software</td>
+            <td>command line client of VRChat Package Manager</td>
+            <td>anatawa12</td>
+            <td>N/A</td>
+            <td><a href="https://github.com/vrc-get/vrc-get">Github</a></td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td>Sinpin-vr</td>
+            <td>Steam VR Plugin</td>
+            <td>A SteamVR overlay for Linux+X11 that displays all your screens in VR.</td>
+            <td>CrispyPin</td>
+            <td>N/A</td>
+            <td><a href="https://github.com/CrispyPin/sinpin-vr">Github</a></td>
+            <td>Free</td>
         </tr>
     </tbody>
 
@@ -242,10 +271,46 @@ async function updatePrices() {
 window.onload = updatePrices;
 
 </script>
-
+<script>
+    function sortTable(columnIndex) {
+        const table = document.querySelector('.software-table');
+        const rows = Array.from(table.querySelectorAll('tr')).slice(1); // Skip header row
+        const isAscending = table.dataset.sortOrder !== 'asc';
+    
+        // Toggle the sorting order
+        table.dataset.sortOrder = isAscending ? 'asc' : 'desc';
+    
+        rows.sort((a, b) => {
+            // Get the cell values and trim whitespace
+            let cellA = a.cells[columnIndex]?.textContent.trim().toLowerCase() || '';
+            let cellB = b.cells[columnIndex]?.textContent.trim().toLowerCase() || '';
+    
+            // For text sorting (e.g., "Type" column), compare strings
+            if (columnIndex === 1) { // Change index if "Type" is another column
+                return isAscending 
+                    ? cellA.localeCompare(cellB) 
+                    : cellB.localeCompare(cellA);
+            }
+    
+            // Sorting by Price (column 6)
+            if (columnIndex === 6) {
+                cellA = cellA === 'free' ? 0 : parseFloat(cellA.replace(/[^0-9.]/g, '')) || Infinity;
+                cellB = cellB === 'free' ? 0 : parseFloat(cellB.replace(/[^0-9.]/g, '')) || Infinity;
+                return isAscending ? cellA - cellB : cellB - cellA;
+            }
+    
+            // Default case for other columns (string comparison)
+            return isAscending 
+                ? (cellA > cellB ? 1 : -1)
+                : (cellA < cellB ? 1 : -1);
+        });
+    
+        // Re-append sorted rows to the table body
+        rows.forEach(row => table.appendChild(row));
+    }
+    </script>
 <footer style="text-align: center; margin-top: 20px; color: #fff;">
-        Made and upkeeped by <a href="https://discord.gg/cRTseD5TeG" style="color: #008b8b; text-decoration: none;">Mɾ_̆̈Ọυαȥι</a> 
-        for questions or suggestions DM me</a>
-    </footer>
+    Made and upkeeped by <a href="https://qu4z1.xyz" target="_blank" >Mɾ_̆̈Ọυαȥι</a> for questions or suggestions join the <a target="_blank"  href="https://discord.gg/cRTseD5TeG" class="links">Discord</a></a>
+</footer>
 </body>
 </html>
