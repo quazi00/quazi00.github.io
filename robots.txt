@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://qu4z1.xyz/sitemap.xml
