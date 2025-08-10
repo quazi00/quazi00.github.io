@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('https://qu4z1.xyz/resources/images/background.jpg') center/cover no-repeat fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Dark overlay for better readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .card {
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-section {
+            margin-bottom: 32px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid #444;
+            background: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .handle {
+            font-size: 16px;
+            color: #888;
+            font-weight: 300;
+        }
+
+        .about {
+            margin-bottom: 32px;
+        }
+
+        .about h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .about p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .badge-section {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .badge-link {
+            display: inline-block;
+        }
+
+        .wigle-badge {
+            max-height: 60px;
+            opacity: 0.9;
+            transition: all 0.2s ease;
+        }
+
+        .wigle-badge:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.2s ease;
+        }
+
+        .link-btn:hover {
+            background: #353535;
+            border-color: #555;
+            transform: translateY(-1px);
+        }
+
+        .link-icon {
+            font-size: 16px;
+        }
+
+        .additional-links {
+            margin-top: 16px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .subtle-link {
+            padding: 6px 10px;
+            background: #262626;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #888;
+            text-decoration: none;
+            font-size: 11px;
+            transition: all 0.2s ease;
+        }
+
+        .subtle-link:hover {
+            background: #2a2a2a;
+            color: #aaa;
+            border-color: #404040;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .card {
+                padding: 32px 24px;
+                margin: 16px;
+            }
+            
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+            
+            .name {
+                font-size: 20px;
+            }
+            
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="https://qu4z1.xyz/resources/images/quazipfp.png" alt="Qu4z1 Profile" />
+            </div>
+            <div class="name">Mr. Ouazi</div>
+            <div class="handle">@qu4z1</div>
+        </div>
+
+        <div class="about">
+            <h3>About</h3>
+            <p>Aspiring locksmith with a fascination for access control and the small details that decide if something stays secure. I like picking apart tech, from VR worlds to real-world hardware. Interested in privacy and running locally hosted services to keep data under my control, away from the cloud and big corporations.</p>
+            
+            <div class="badge-section">
+                <a href="https://wigle.net" target="_blank" class="badge-link">
+                    <img src="https://wigle.net/bi/fohll_IAVJhzZxMrti4jnA.png" alt="WiGLE Badge" class="wigle-badge">
+                </a>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://signal.me/#eu/mpKa3ZQ62brqVi4YdJzD0nZ8dj2KSKRNszQ1qmch2FmqWmJuM4dK05W3xqLQzI7B" class="link-btn" target="_blank">
+                <span class="link-icon">🔒</span>
+                <span>Signal</span>
+            </a>
+
+            <a href="https://quazi00.github.io" class="link-btn" target="_blank">
+                <span class="link-icon">🔗</span>
+                <span>GitHub</span>
+            </a>
+
+            <a href="discord://-/users/261935450481098753" class="link-btn">
+                <span class="link-icon">💬</span>
+                <span>Discord</span>
+            </a>
+
+            <a href="https://steamcommunity.com/profiles/76561198840313938/myworkshopfiles/" class="link-btn" target="_blank">
+                <span class="link-icon">🎨</span>
+                <span>Steam Workshop</span>
+            </a>
+        </div>
+
+        <div class="additional-links">
+            <a href="https://qu4z1.xyz/vrc/" class="subtle-link" target="_blank">VRC</a>
+            <a href="https://pcpartpicker.com/user/quazi/saved/vfhzYJ" class="subtle-link" target="_blank">PC Specs</a>
+        </div>
+    </div>
+</body>
+</html>
